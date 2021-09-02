@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Parrallax scrolling</title>
+</head>
+<body>
+    <div class="main">
+        <header id="header">
+            <nav class="nav">
+                <span class="logo">
+                    Jungle
+                </span>
+                <ul class="nav-list">
+                    <li class="nav-item"> <a href="" class="nav-link"> Home</a></li>
+                    <li class="nav-item"> <a href="" class="nav-link"> About</a></li>
+                    <li class="nav-item"> <a href="" class="nav-link"> Destination</a></li>
+                    <li class="nav-item"> <a href="" class="nav-link"> Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <section>
+            <h2 id="text"> <span>It's time for a new</span><br> Aventure</h2>
+            <img src="./assets/img/bird1.png" alt="" id="bird1">
+            <img src="./assets/img/bird2.png" alt="" id="bird2">
+            <img src="./assets/img/forest.png" alt="" id="forest">
+            <img src="./assets/img/rocks.png" alt="" id="rock">
+            <img src="./assets/img/water.png" alt="" id="water">
+        </section>
+        <div class="sec">
+            <h2>Parrallax Scrolling Effects</h2>
+        <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, at! Nulla alias tenetur possimus    
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, at! Nulla alias tenetur possimus natus error nisi nobis autem? Doloribus dolorem hic nulla magnam quo suscipit explicabo harum commodi sapiente? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, quisquam delectus. Natus perferendis illo ab suscipit,<br><br> voluptas cupiditate aliquid praesentium? Facere quis fugit cupiditate animi ratione! Sequi alias similique quam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, voluptatum perferendis esse amet nulla ipsam laudantium ea facilis, nihil velit earum incidunt architecto sint pariatur sed deleniti minus natus ullam? Lorem ipsum, dolor sit amet consectetur adipisicing elit.<br><br> Nemo laboriosam accusantium fugiat fugit facere dignissimos vero suscipit saepe harum? Nam ratione a veritatis aliquam unde facere tempore repellat! Debitis, nesciunt.
+            <br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas sunt, accusantium harum repellendus id omnis quidem deleniti ex perspiciatis tempore iusto hic inventore eveniet, minima facere ipsum impedit cumque Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo illo sed nihil mollitia rem quae? Unde aperiam totam quam dicta. Aspernatur perferendis, cum laudantium iure tempora voluptatibus error tempore accusantium.
+            <br> <br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum recusandae excepturi deserunt ipsum, velit, quas est asperiores, odio nostrum ducimus fuga repellendus maiores nemo! Quos omnis optio iusto? Repellendus, ut.
+        </div>
+    </div>
+    <script>
+        let text=document.getElementById('text');
+        let bird1=document.getElementById('bird1');
+        let bird2=document.getElementById('bird2');
+        let forest=document.getElementById('forest');
+        let rock=document.getElementById('rock');
+        let water=document.getElementById('water');
+        let header=document.getElementById('header');
+        
+        window.addEventListener('scroll', function()
+        {
+            let value =window.scrollY;
+            text.style.top= 35 + value * -0.5 + '%' ; 
+            bird1.style.top= value * -1.5 + 'px'; 
+            bird1.style.left= value * 2  + 'px'; 
+            bird2.style.top= value * -1.5 + 'px'; 
+            bird2.style.left= value * -5  + 'px'; 
+            rock.style.top=value * -0.12 + 'px';
+            forest.style.top=value * 0.25 + 'px';
+            header.style.top=value * -0.15 + 'px';
+
+        });
+
+    </script>
+    
+</body>
+</html>
